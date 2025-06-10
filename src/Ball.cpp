@@ -7,7 +7,7 @@ void Ball::reset_ball()
     this->rect.set_x(this->init_x);
     this->rect.set_y(this->init_y);
     this->speed = this->init_speed;
-    this->angle = this->init_angle;
+    this->angle = -(Ball::distribution(Ball::rng)*0.9+0.05)*PI;
 }
 
 void Ball::logic(const double time, Paddle& paddle)

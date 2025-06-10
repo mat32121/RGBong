@@ -5,7 +5,7 @@
 
 #include "Entity.hpp"
 
-class Rectangle
+class Rectangle : public Entity
 {
 public:
     Rectangle(float _x, float _y, int _w, int _h, sf::Color _color = sf::Color::White);

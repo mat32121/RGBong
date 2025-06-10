@@ -18,14 +18,15 @@ public:
     void reset_ball();
     void logic(const double time, Paddle& paddle);
     void render(sf::RenderWindow& window) const {this->rect.render(window);}
+
+    inline static std::random_device rng;
+    inline static std::uniform_real_distribution<double> distribution;
 private:
     float init_x, init_y;
     double init_speed, init_angle;
 
     double speed, angle;
     Rectangle rect;
-    inline static std::random_device rng;
-    inline static std::uniform_real_distribution<double> distribution;
     int x_bound, y_bound;
 };
 

@@ -22,7 +22,7 @@ int main()
 
     Scoreboard scoreboard(KeyMap::NUM_PLAYERS, WIDTH, HEIGHT);
     Paddle paddle(WIDTH/2-HEIGHT/10, HEIGHT-HEIGHT/40, HEIGHT/5, HEIGHT/50, WIDTH);
-    Ball ball(paddle.x()+paddle.w()/2, paddle.y()-paddle.h()-1, paddle.h(), paddle.h(), HEIGHT/2, -PI/4, WIDTH, HEIGHT);
+    Ball ball(paddle.x()+paddle.w()/2, paddle.y()-paddle.h()-1, paddle.h(), paddle.h(), HEIGHT/2, -(Ball::distribution(Ball::rng)*0.9+0.05)*PI, WIDTH, HEIGHT);
     const std::array<Entity*, 3> entities({&scoreboard, &ball, &paddle});
 
     sf::Clock clock;
