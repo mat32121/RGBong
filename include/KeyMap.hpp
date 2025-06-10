@@ -17,8 +17,8 @@ private:
     inline static bool keys[KeyMap::NUM_PLAYERS][KeyMap::NUM_KEYS];
     static constexpr sf::Keyboard::Key key_mappings[KeyMap::NUM_PLAYERS][KeyMap::NUM_KEYS] =
     {
-        {sf::Keyboard::Key::Left, sf::Keyboard::Key::Right},
-        {sf::Keyboard::Key::A, sf::Keyboard::Key::D}
+        {sf::Keyboard::Key::A, sf::Keyboard::Key::D},
+        {sf::Keyboard::Key::Left, sf::Keyboard::Key::Right}
     };
 };
 
